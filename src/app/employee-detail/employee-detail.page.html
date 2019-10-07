@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Employee_Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+<!-- <ion-label class="ion-text-center">Employee Detail</ion-label> -->
+<ion-content>
+    <form #form="ngForm" (ngSubmit)="register(form)" method="post">
+      <ion-item>
+          <ion-label position="floating">First Name :: {{"ABC"}}</ion-label>
+          
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="floating">Last Name</ion-label>
+        
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        
+      </ion-item>
+    
+      <ion-button type="submit" expand="full" color="danger">Back to Home</ion-button>
+    </form>
+   
+    <!-- <ion-button expand="full" color="primary" (click)="loginModal()">Login</ion-button> -->
+  </ion-content>  
+  
