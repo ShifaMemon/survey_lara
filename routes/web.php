@@ -55,7 +55,7 @@ Route::get('Department/DepartmentDetail/add','DepartmentController@insert_form')
 Route::post('Department/DepartmentDetail/add','DepartmentController@store_department');
 Route::get('Department/DepartmentDetail','DepartmentController@call_page')->name('department_detail');
 
- Route::get('surveys/SurveyDetail','SurveyController@call_page')->name('survey_detail');
+Route::get('surveys/SurveyDetail','SurveyController@call_page')->name('survey_detail');
 Route::get('surveys/SurveyDetail/delete/{id}', 'SurveyController@delete_survey')->name('survey_delete');
 Route::get('surveys/SurveyDetail/edit/{id}', 'SurveyController@edit_survey')->name('survey_edit');
 Route::post('surveys/SurveyDetail/edit/{id}', 'SurveyController@edit_save');
@@ -65,5 +65,8 @@ Route::post('surveys/SurveyDetail/add','SurveyController@store_survey');
  
 Route::get('question/add','QuestionController@type_listing')->name('ques_type'); 
 //Route::post('question/add','QuestionController@get_listing');
+
+//For Answers...
+Route::get('answers/AddAnswer','ShowAnswers@AnswerDetail')->name('Answer_detail'); 
 
 Route::get('/home', 'HomeController@index')->name('home');

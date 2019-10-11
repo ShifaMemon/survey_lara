@@ -61,7 +61,7 @@
                         <li> <a href="<?php echo e(route('department_detail')); ?>">Departments</a></li>
                         <li> <a href="<?php echo e(route('survey_detail')); ?>">Surveys</a></li>
                         <li> <a href="<?php echo e(route('ques_type')); ?>">Questions</a></li>
-                        <li> <a href="#">Answers</a></li>
+                        <li> <a href="<?php echo e(route('Answer_detail')); ?>">Answers</a></li>
 
                          
                             <li class="dropdown">

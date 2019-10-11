@@ -7,7 +7,7 @@
         <div class="col-xs-12">
             <div class="panel panel-default">
                 <div class="panel-heading" style="padding:10px 15px;font-size:20px;text-transform: uppercase;"><b><?php echo $name;?></b>
-                @if (Auth::user()->name=="purva")
+                @if (Auth::user()->name=="purva" || Auth::user()->name=="shifa" )
                                  <a href="{{ route('company_insert') }}" class="btn btn-primary" style="align:center;float:right">
                                    New Record
                                 </a>

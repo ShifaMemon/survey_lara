@@ -12,8 +12,7 @@ class CompanyController extends Controller
 {
     public function call_page()
     {
-       $companies =companies::get();
-       
+        $companies =companies::get();       
         $data  = [];
         $data['companies'] = $companies;
         $table=[];

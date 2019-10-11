@@ -7,7 +7,7 @@
         <div class="col-xs-12">
             <div class="panel panel-default">
                 <div class="panel-heading" style="padding:10px 15px;font-size:20px;text-transform: uppercase;"><b><?php echo $name;?></b>
-                @if (Auth::user()->name=="purva")
+                @if (Auth::user()->name=="purva" || Auth::user()->name=="shifa")
                                  <a href="{{ route('survey_insert') }}" class="btn btn-primary" style="align:center;float:right">
                                    New Record
                                 </a>
@@ -33,7 +33,7 @@
     @endif 
     <?php } ?>
       
-    @if (Auth::user()->name=="purva")   <td colspan="2" style="text-align:justify"> <b> ACTION</b></td>  @endif 
+    @if (Auth::user()->name=="purva" || Auth::user()->name=="shifa")   <td colspan="2" style="text-align:justify"> <b> ACTION</b></td>  @endif 
 
     <tr>
    <?php  foreach($surveys as $survey){ 
@@ -42,11 +42,11 @@
     <td><?php echo $survey -> id;?></td>
     <td><?php echo $survey -> company-> c_name;?></td>
     <td><?php echo $survey -> s_start_date;?></td>
-    <td><?php echo $survey -> s_end_date;;?></td>
+    <td><?php echo $survey -> s_end_date;?></td>
     <td><?php echo $survey -> survey_title;?></td>
     <td><?php echo $survey -> desc;?></td>
     <td><?php echo $survey -> status;?></td>
-     @if (Auth::user()->name=="purva")  
+     @if (Auth::user()->name=="purva" || Auth::user()->name=="shifa")  
     <td>
             <a href="{{ route('survey_edit',[$survey->id])}}">edit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
             <a href="{{ route('survey_delete',[$survey -> id]) }}">delete</a> 
